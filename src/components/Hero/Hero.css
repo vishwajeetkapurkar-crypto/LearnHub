@@ -1,0 +1,485 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  max-width: 1480px;
+  min-height: 620px;
+
+  margin: 0 auto;
+
+  padding: 45px 32px 105px;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+
+  gap: 60px;
+
+  background: var(--background);
+}
+
+
+/* =========================
+   LARGE BACKGROUND GLOW
+========================= */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  top: -280px;
+  right: -220px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 0, 0.18),
+    transparent 68%
+  );
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* Second subtle glow */
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  left: -250px;
+  bottom: -200px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 0, 0.08),
+    transparent 70%
+  );
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* Keep content above background effects */
+
+.hero-left,
+.hero-right {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.hero-left {
+  max-width: 720px;
+}
+
+
+/* =========================
+   HERO BADGE
+========================= */
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 18px;
+
+  padding: 10px 17px;
+
+  background: rgba(255, 107, 0, 0.1);
+
+  border: 1px solid rgba(255, 107, 0, 0.2);
+  border-radius: 999px;
+
+  color: #ff9a57;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   MAIN HEADING
+========================= */
+
+.hero-left h1 {
+  max-width: 700px;
+
+  margin: 0 0 24px;
+
+  color: var(--text);
+
+  font-size: clamp(54px, 5vw, 76px);
+  line-height: 1.03;
+
+  font-weight: 800;
+
+  letter-spacing: -3px;
+}
+
+
+.hero-left h1 span,
+.hero-left > h1 > span {
+  color: var(--primary);
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero-left > p {
+  max-width: 590px;
+
+  margin: 0 0 34px;
+
+  color: var(--text-light);
+
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  margin-bottom: 40px;
+}
+
+
+/* Primary Button */
+
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 15px 27px;
+
+  border-radius: 999px;
+
+  background: var(--primary);
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  box-shadow:
+    0 12px 28px rgba(255, 107, 0, 0.25);
+
+  transition:
+    transform var(--transition),
+    background var(--transition),
+    box-shadow var(--transition);
+}
+
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+
+  background: var(--primary-hover);
+
+  box-shadow:
+    0 18px 35px rgba(255, 107, 0, 0.34);
+}
+
+
+.primary-btn svg {
+  transition: transform var(--transition);
+}
+
+
+.primary-btn:hover svg {
+  transform: translateX(5px);
+}
+
+
+/* Secondary Button */
+
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 15px 27px;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.045);
+
+  color: var(--text);
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition:
+    transform var(--transition),
+    background var(--transition),
+    border-color var(--transition);
+}
+
+
+.secondary-btn:hover {
+  transform: translateY(-3px);
+
+  background: rgba(255, 107, 0, 0.1);
+
+  border-color: rgba(255, 107, 0, 0.4);
+}
+
+
+/* =========================
+   HERO RATING
+========================= */
+
+.hero-rating {
+  display: grid;
+
+  grid-template-columns: auto 1fr;
+
+  align-items: center;
+
+  column-gap: 18px;
+  row-gap: 8px;
+}
+
+
+/* Stars */
+
+.stars {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  color: #ffb400;
+}
+
+
+/* Rating number + reviews */
+
+.rating-text {
+  display: contents;
+}
+
+
+.rating-text h3 {
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #f8fafc;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+.rating-text h3 span {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+/* Text starts from left edge */
+
+.rating-text p {
+  grid-column: 1 / -1;
+
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.hero-right {
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Large glow behind image */
+
+.hero-right::before {
+  content: "";
+
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 0, 0.18) 0%,
+    rgba(255, 107, 0, 0.07) 40%,
+    transparent 70%
+  );
+
+  filter: blur(12px);
+
+  z-index: -1;
+}
+
+
+/* Decorative dots */
+
+.hero-right::after {
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  right: 10px;
+  bottom: 50px;
+
+  background-image:
+    radial-gradient(
+      rgba(255, 138, 61, 0.75) 1.3px,
+      transparent 1.3px
+    );
+
+  background-size: 14px 14px;
+
+  opacity: 0.28;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 560px);
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 28px 35px rgba(0, 0, 0, 0.35));
+
+  animation: heroFloat 5s ease-in-out infinite;
+}
+
+
+/* =========================
+   IMAGE ANIMATION
+========================= */
+
+@keyframes heroFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+}
+
+/* ========================================
+   HERO TO NEXT SECTION TRANSITION
+======================================== */
+
+.hero {
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -1px;
+
+  width: 65%;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 107, 0, 0.15),
+    rgba(255, 107, 0, 0.7),
+    rgba(255, 107, 0, 0.15),
+    transparent
+  );
+
+  box-shadow:
+    0 0 25px rgba(255, 107, 0, 0.22);
+
+  z-index: 5;
+}

@@ -27,11 +27,11 @@ function Contact() {
     try {
 
       await emailjs.sendForm(
-        "service_66wg2xk",
-        "template_037dgpn",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
         {
-          publicKey: "5xQQlOQuvtZLRE47A"
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         }
       );
 

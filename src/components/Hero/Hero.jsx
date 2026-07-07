@@ -1,120 +1,90 @@
 import "./Hero.css";
-import heroImage from "../../assets/images/hero.jpg";
+import heroImage from "../../assets/images/hero.png";
 
-import {
-    ArrowRight,
-    Play,
-    Star,
-    BookOpen,
-    Users
-} from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Star } from "lucide-react";
 
 function Hero() {
+  return (
+    <section className="hero">
 
-    return (
+      <div className="hero-left">
 
-        <section className="hero">
+        <span className="hero-badge">
+          🚀 Trusted by 5000+ learners
+        </span>
 
-            <div className="hero-left">
+        <h1>
+          The smarter way
+          <br />
+          to learn
+          <span> future skills.</span>
+        </h1>
 
-                <span className="hero-badge">
+        <p>
+          Learn React, Java, Spring Boot,
+          Python and AI by building real-world
+          projects guided by industry experts.
+        </p>
 
-                    🚀 Trusted by 5000+ learners
+        <div className="hero-buttons">
 
-                </span>
+          <Link
+            to="/courses"
+            className="primary-btn"
+          >
+            Explore Courses
+            <ArrowRight size={20} />
+          </Link>
 
-                <h1>
+          <Link
+            to="/about"
+            className="secondary-btn"
+          >
+            Learn More
+            <ArrowRight size={20} />
+          </Link>
 
-                    The smarter way
-                    <br />
+        </div>
 
-                    to learn
+        <div className="hero-rating">
 
-                    <span> future skills.</span>
+          <div className="stars">
+            <Star fill="#ffb400" />
+            <Star fill="#ffb400" />
+            <Star fill="#ffb400" />
+            <Star fill="#ffb400" />
+            <Star fill="#ffb400" />
+          </div>
 
-                </h1>
+          <div className="rating-text">
+            <h3>
+              4.7
+              <span>(2K Reviews)</span>
+            </h3>
 
-                <p>
+            <p>
+              Loved by thousands of students worldwide
+            </p>
+          </div>
 
-                    Learn React, Java, Spring Boot,
-                    Python and AI by building real-world
-                    projects guided by industry experts.
+        </div>
 
-                </p>
+      </div>
 
-                <div className="hero-buttons">
+      <div className="hero-right">
 
-                    <button className="primary-btn">
+        <div className="hero-image">
+          <img
+            src={heroImage}
+            alt="Student learning online"
+          />
+        </div>
 
-                        Explore Courses
+      </div>
 
-                        <ArrowRight size={20} />
-
-                    </button>
-
-                    <button className="secondary-btn">
-
-                        Learn More
-
-                        <ArrowRight size={20} />
-
-                    </button>
-
-                </div>
-
-                <div className="hero-rating">
-
-                    <div className="stars">
-
-                        <Star fill="#ffb400" />
-                        <Star fill="#ffb400" />
-                        <Star fill="#ffb400" />
-                        <Star fill="#ffb400" />
-                        <Star fill="#ffb400" />
-
-                    </div>
-
-                    <div className="rating-text">
-
-                        <h3>
-
-                            4.7
-
-                            <span>(2K Reviews)</span>
-
-                        </h3>
-
-                        <p >
-
-
-                            Loved by thousands of students worldwide
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div className="hero-right">
-
-                <div className="hero-image">
-
-                    <img
-                        src={heroImage}
-                        alt="Hero"
-                    />
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-    );
-
+    </section>
+  );
 }
 
 export default Hero;

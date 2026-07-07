@@ -1,0 +1,435 @@
+/* ========================================
+   CATEGORY PAGE
+======================================== */
+
+.category-page {
+  min-height: 100vh;
+
+  background: #0b0f19;
+}
+
+
+/* ========================================
+   CATEGORY HERO
+======================================== */
+
+.category-page-hero {
+  position: relative;
+  overflow: hidden;
+
+  padding: 35px 5% 85px;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(255, 107, 0, 0.13),
+      transparent 30%
+    ),
+    #0b0f19;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+/* Orange separator */
+
+.category-page-hero::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 65%;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 107, 0, 0.15),
+    rgba(255, 107, 0, 0.7),
+    rgba(255, 107, 0, 0.15),
+    transparent
+  );
+
+  box-shadow:
+    0 0 25px rgba(255, 107, 0, 0.22);
+}
+
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.category-hero-content {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* ========================================
+   BACK LINK
+======================================== */
+
+.category-back-link {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  width: fit-content;
+
+  gap: 7px;
+
+  margin-bottom: 38px;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.category-back-link:hover {
+  color: #ff6b00;
+
+  transform: translateX(-4px);
+}
+
+
+/* ========================================
+   CATEGORY TAG
+======================================== */
+
+.category-page-tag {
+  display: inline-block;
+
+  margin-bottom: 18px;
+  padding: 8px 15px;
+
+  background: rgba(255, 107, 0, 0.1);
+
+  border:
+    1px solid rgba(255, 107, 0, 0.22);
+
+  border-radius: 999px;
+
+  color: #ff9a57;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+}
+
+
+/* ========================================
+   HERO TITLE
+======================================== */
+
+.category-hero-content h1 {
+  margin: 0 0 20px;
+
+  color: #f8fafc;
+
+  font-size: 56px;
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+}
+
+
+.category-hero-content h1 span {
+  color: #ff6b00;
+}
+
+
+/* ========================================
+   HERO DESCRIPTION
+======================================== */
+
+.category-hero-content > p {
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  color: #94a3b8;
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   COURSES SECTION
+======================================== */
+
+.category-courses-section {
+  min-height: 500px;
+
+  padding: 75px 5% 110px;
+
+  background: #0f1523;
+}
+
+
+/* ========================================
+   RESULTS HEADER
+======================================== */
+
+.category-results-header {
+  width: 100%;
+  max-width: 1420px;
+
+  margin: 0 auto 38px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+
+.category-results-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #ff6b00;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+}
+
+
+.category-results-header h2 {
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: 32px;
+
+  letter-spacing: -0.8px;
+}
+
+
+.category-results-header > p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   COURSE GRID
+======================================== */
+
+.category-course-grid {
+  width: 100%;
+  max-width: 1420px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  column-gap: 28px;
+  row-gap: 34px;
+
+  align-items: stretch;
+}
+
+
+.category-course-grid .course-card {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+}
+
+
+/* ========================================
+   EMPTY STATE
+======================================== */
+
+.category-empty-state {
+  width: 100%;
+  max-width: 600px;
+
+  margin: 60px auto;
+
+  padding: 55px 30px;
+
+  text-align: center;
+
+  background: #151d2d;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 22px;
+}
+
+
+.category-empty-icon {
+  width: 68px;
+  height: 68px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 107, 0, 0.1);
+
+  border:
+    1px solid rgba(255, 107, 0, 0.2);
+
+  border-radius: 18px;
+
+  color: #ff6b00;
+}
+
+
+.category-empty-state h2 {
+  margin: 0 0 10px;
+
+  color: #f8fafc;
+
+  font-size: 26px;
+}
+
+
+.category-empty-state p {
+  margin: 0 0 25px;
+
+  color: #94a3b8;
+}
+
+
+.category-empty-state a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 13px 22px;
+
+  background: #ff6b00;
+
+  border-radius: 999px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.category-empty-state a:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(255, 107, 0, 0.25);
+}
+
+
+/* ========================================
+   LARGE TABLET
+======================================== */
+
+@media (max-width: 1200px) {
+
+  .category-course-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .category-course-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .category-page-hero {
+    padding: 60px 20px 70px;
+  }
+
+
+  .category-hero-content h1 {
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .category-hero-content > p {
+    font-size: 16px;
+  }
+
+
+  .category-courses-section {
+    padding: 60px 20px 85px;
+  }
+
+
+  .category-results-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+
+  .category-results-header h2 {
+    font-size: 28px;
+  }
+
+
+  .category-course-grid {
+    max-width: 400px;
+
+    grid-template-columns: 1fr;
+  }
+
+}

@@ -11,6 +11,7 @@ const courses = [
     title: "React for Beginners",
     instructor: "Hardik Pandya",
     category: "Web Development",
+    categorySlug: "web-development",
     duration: "12 Hours",
     level: "Beginner",
     description:
@@ -24,7 +25,8 @@ const courses = [
     id: 2,
     title: "Java Programming",
     instructor: "Virat Kohli",
-    category: "Programming",
+    category: "Java",
+    categorySlug: "java",
     duration: "18 Hours",
     level: "Intermediate",
     description:
@@ -38,7 +40,8 @@ const courses = [
     id: 3,
     title: "Python Programming",
     instructor: "MS Dhoni",
-    category: "Programming",
+    category: "Python",
+    categorySlug: "python",
     duration: "15 Hours",
     level: "Beginner",
     description:
@@ -52,7 +55,8 @@ const courses = [
     id: 4,
     title: "SQL Bootcamp",
     instructor: "Rohit Sharma",
-    category: "Database",
+    category: "SQL",
+    categorySlug: "sql",
     duration: "10 Hours",
     level: "Beginner",
     description:
@@ -66,7 +70,8 @@ const courses = [
     id: 5,
     title: "Spring Boot Masterclass",
     instructor: "Jasprit Bumrah",
-    category: "Backend",
+    category: "Java",
+    categorySlug: "java",
     duration: "20 Hours",
     level: "Advanced",
     description:
@@ -80,7 +85,8 @@ const courses = [
     id: 6,
     title: "Prompt Engineering",
     instructor: "Shubman Gill",
-    category: "Artificial Intelligence",
+    category: "Prompt Engineering",
+    categorySlug: "prompt-engineering",
     duration: "8 Hours",
     level: "Beginner",
     description:

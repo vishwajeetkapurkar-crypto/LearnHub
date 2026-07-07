@@ -1,0 +1,424 @@
+/* ========================================
+   ABOUT PAGE
+======================================== */
+
+.about-page {
+  min-height: 100vh;
+  background: #0b0f19;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.about-hero {
+  position: relative;
+  overflow: hidden;
+
+  padding: 100px 5% 95px;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 107, 0, 0.13),
+      transparent 30%
+    ),
+    #0b0f19;
+}
+
+.about-hero::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  width: 65%;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 107, 0, 0.15),
+    #ff6b00,
+    rgba(255, 107, 0, 0.15),
+    transparent
+  );
+
+  box-shadow: 0 0 25px rgba(255, 107, 0, 0.2);
+}
+
+.about-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-tag,
+.about-section-tag {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: #ff6b00;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.about-tag {
+  padding: 8px 15px;
+
+  background: rgba(255, 107, 0, 0.1);
+
+  border: 1px solid rgba(255, 107, 0, 0.22);
+  border-radius: 999px;
+
+  color: #ff9a57;
+}
+
+.about-hero h1 {
+  max-width: 850px;
+
+  margin: 0 auto 22px;
+
+  color: #f8fafc;
+
+  font-size: 58px;
+  line-height: 1.12;
+
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.about-hero h1 span {
+  color: #ff6b00;
+}
+
+.about-hero p {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  color: #94a3b8;
+
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.about-intro {
+  padding: 100px 5%;
+  background: #0f1523;
+}
+
+.about-intro-container {
+  max-width: 1250px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 90px;
+}
+
+.about-intro-left h2 {
+  max-width: 500px;
+
+  color: #f8fafc;
+
+  font-size: 46px;
+  line-height: 1.2;
+
+  letter-spacing: -1.5px;
+}
+
+.about-intro-right p {
+  margin-bottom: 20px;
+
+  color: #94a3b8;
+
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+
+/* ========================================
+   PURPOSE
+======================================== */
+
+.about-purpose {
+  padding: 100px 5%;
+  background: #0b0f19;
+}
+
+.about-section-heading {
+  max-width: 700px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.about-section-heading h2 {
+  margin-bottom: 18px;
+
+  color: #f8fafc;
+
+  font-size: 44px;
+  letter-spacing: -1.3px;
+}
+
+.about-section-heading p {
+  color: #94a3b8;
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.about-feature-grid {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+.about-feature-card {
+  padding: 34px;
+
+  background: #151d2d;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.about-feature-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(255, 107, 0, 0.45);
+}
+
+.about-feature-icon {
+  width: 58px;
+  height: 58px;
+
+  margin-bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 107, 0, 0.1);
+
+  border-radius: 16px;
+
+  color: #ff6b00;
+}
+
+.about-feature-card h3 {
+  margin-bottom: 12px;
+
+  color: #f8fafc;
+
+  font-size: 21px;
+}
+
+.about-feature-card p {
+  color: #94a3b8;
+
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   TECHNOLOGIES
+======================================== */
+
+.about-technologies {
+  padding: 100px 5%;
+
+  background: #0f1523;
+}
+
+.technology-grid {
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+.technology-card {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 16px;
+
+  padding: 25px;
+
+  background: #151d2d;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+}
+
+.technology-card > svg {
+  flex-shrink: 0;
+
+  color: #ff6b00;
+}
+
+.technology-card h3 {
+  margin-bottom: 7px;
+
+  color: #f8fafc;
+}
+
+.technology-card p {
+  color: #94a3b8;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.about-cta {
+  padding: 105px 5%;
+
+  background:
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(255, 107, 0, 0.14),
+      transparent 40%
+    ),
+    #0b0f19;
+}
+
+.about-cta-content {
+  max-width: 750px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.about-cta-content > span {
+  color: #ff6b00;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.about-cta h2 {
+  margin: 18px 0;
+
+  color: #f8fafc;
+
+  font-size: 46px;
+  letter-spacing: -1.5px;
+}
+
+.about-cta p {
+  max-width: 600px;
+
+  margin: 0 auto 30px;
+
+  color: #94a3b8;
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.about-cta a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 15px 27px;
+
+  background: #ff6b00;
+
+  border-radius: 999px;
+
+  color: #ffffff;
+
+  font-weight: 700;
+
+  box-shadow: 0 12px 28px rgba(255, 107, 0, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.about-cta a:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 18px 35px rgba(255, 107, 0, 0.34);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .about-intro-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-feature-grid,
+  .technology-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    padding: 75px 20px;
+  }
+
+  .about-hero h1 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .about-intro,
+  .about-purpose,
+  .about-technologies,
+  .about-cta {
+    padding: 75px 20px;
+  }
+
+  .about-intro-left h2,
+  .about-section-heading h2,
+  .about-cta h2 {
+    font-size: 34px;
+  }
+}

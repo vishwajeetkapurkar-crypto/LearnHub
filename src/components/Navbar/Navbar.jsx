@@ -1,5 +1,12 @@
 import "./Navbar.css";
-import { NavLink } from "react-router-dom";
+
+import { useState } from "react";
+
+import {
+  NavLink,
+  useNavigate
+} from "react-router-dom";
+
 import {
   GraduationCap,
   Search,
@@ -7,85 +14,231 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+import categories from "../../data/categories";
+
+
 function Navbar() {
+
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const navigate = useNavigate();
+
+
+  /* =========================
+     NAVBAR SEARCH
+  ========================= */
+
+  const handleSearch = (event) => {
+
+    event.preventDefault();
+
+    const trimmedSearch = searchTerm.trim();
+
+    if (!trimmedSearch) {
+      return;
+    }
+
+    navigate(
+      `/courses?search=${encodeURIComponent(trimmedSearch)}`
+    );
+
+    setSearchTerm("");
+
+  };
+
+
   return (
+
     <header className="header">
 
-      <nav className="navbar ">
+      <nav className="navbar">
 
-        {/* Logo */}
 
-        <div className="logo">
+        {/* =========================
+            LOGO
+        ========================= */}
+
+        <NavLink
+          to="/"
+          className="logo"
+        >
 
           <div className="logo-icon">
+
             <GraduationCap size={22} />
+
           </div>
 
           <h2>
+
             Learn<span>Hub</span>
+
           </h2>
 
-        </div>
+        </NavLink>
 
-        {/* Navigation */}
+
+        {/* =========================
+            NAVIGATION LINKS
+        ========================= */}
 
         <ul className="nav-links">
 
-          <li>
-            <NavLink to="/">Home</NavLink>
-          </li>
+
+          {/* HOME */}
 
           <li>
+
+            <NavLink to="/">
+
+              Home
+
+            </NavLink>
+
+          </li>
+
+
+          {/* COURSES */}
+
+          <li>
+
             <NavLink to="/courses">
+
               Courses
-              
+
             </NavLink>
+
           </li>
 
-          <li>
-            <NavLink to="/category/web-development">
+
+          {/* =========================
+              CATEGORY DROPDOWN
+          ========================= */}
+
+          <li className="nav-dropdown">
+
+            <button
+              type="button"
+              className="dropdown-trigger"
+            >
+
               Categories
+
               <ChevronDown size={16} />
-            </NavLink>
+
+            </button>
+
+
+            <div className="dropdown-menu">
+
+              {categories.map((category) => {
+
+                const CategoryIcon = category.icon;
+
+                return (
+
+                  <NavLink
+                    key={category.id}
+                    to={`/category/${category.slug}`}
+                  >
+
+                    <CategoryIcon size={18} />
+
+                    <span>
+
+                      {category.name}
+
+                    </span>
+
+                  </NavLink>
+
+                );
+
+              })}
+
+            </div>
+
           </li>
 
+
+          {/* ABOUT */}
+
           <li>
+
             <NavLink to="/about">
+
               About
+
             </NavLink>
+
           </li>
 
+
+          {/* CONTACT */}
+
           <li>
+
             <NavLink to="/contact">
+
               Contact
+
             </NavLink>
+
           </li>
 
         </ul>
 
-        {/* Right Side */}
+
+        {/* =========================
+            RIGHT SIDE
+        ========================= */}
 
         <div className="nav-right">
 
-          <div className="search-box">
 
-            <Search size={18} className="search-icon" />
+          {/* SEARCH */}
+
+          <form
+            className="search-box"
+            onSubmit={handleSearch}
+          >
+
+            <Search
+              size={18}
+              className="search-icon"
+            />
 
             <input
               type="text"
               placeholder="Search courses..."
+              value={searchTerm}
+              onChange={(event) =>
+                setSearchTerm(event.target.value)
+              }
             />
 
-          </div>
+          </form>
+
+
+          {/* LOGIN */}
 
           <NavLink
             className="login-btn"
             to="/login"
           >
+
             Log in
+
           </NavLink>
 
-          <button className="signup-btn">
+
+          {/* GET STARTED */}
+
+          <button
+            type="button"
+            className="signup-btn"
+            onClick={() => navigate("/courses")}
+          >
 
             Get Started
 
@@ -98,7 +251,10 @@ function Navbar() {
       </nav>
 
     </header>
+
   );
+
 }
+
 
 export default Navbar;

@@ -4,6 +4,12 @@ import pythonImg from "../assets/images/python.jpg";
 import sqlImg from "../assets/images/sql.jpg";
 import springImg from "../assets/images/springboot.jpg";
 import promptImg from "../assets/images/prompt.jpg";
+import generativeAiImg from "../assets/images/generativeAi.jpg";
+import mysqlImg  from "../assets/images/MySql.jpg";
+import pythonDataImg  from "../assets/images/data_analysis.jpg";
+import javaDsaImg  from "../assets/images/dsa.jpg";
+import htmlCssImg  from "../assets/images/html_css.jpg";
+import javascriptImg  from "../assets/images/javascript.jpg";
 
 const courses = [
   {
@@ -76,7 +82,7 @@ const courses = [
     level: "Advanced",
     description:
       "Build REST APIs using Spring Boot, Spring MVC and MySQL.",
-    featured: true,
+    featured: false,
     free: true,
     image: springImg,
   },
@@ -95,6 +101,99 @@ const courses = [
     free: true,
     image: promptImg,
   },
+
+{
+  id: 7,
+  title: "Modern JavaScript Mastery",
+  instructor: "Suryakumar Yadav",
+  category: "Web Development",
+  categorySlug: "web-development",
+  duration: "16 Hours",
+  level: "Intermediate",
+  description:
+    "Master modern JavaScript including ES6 features, asynchronous programming, DOM manipulation and APIs.",
+  featured: false,
+  free: true,
+  image: javascriptImg,
+},
+
+{
+  id: 8,
+  title: "HTML & CSS Complete Guide",
+  instructor: "Ravindra Jadeja",
+  category: "Web Development",
+  categorySlug: "web-development",
+  duration: "14 Hours",
+  level: "Beginner",
+  description:
+    "Build responsive and modern websites using semantic HTML, Flexbox, Grid and advanced CSS techniques.",
+  featured: false,
+  free: true,
+  image: htmlCssImg,
+},
+
+{
+  id: 9,
+  title: "Java Data Structures",
+  instructor: "Rishabh Pant",
+  category: "Java",
+  categorySlug: "java",
+  duration: "22 Hours",
+  level: "Beginner",
+  description:
+    "Learn essential data structures and problem-solving techniques using practical Java implementations.",
+  featured: true,
+  free: true,
+  image: javaDsaImg,
+},
+
+{
+  id: 10,
+  title: "Python Data Analysis",
+  instructor: "Shreyas Iyer",
+  category: "Python",
+  categorySlug: "python",
+  duration: "18 Hours",
+  level: "Intermediate",
+  description:
+    "Analyze and transform real-world datasets using Python and popular data analysis techniques.",
+  featured: false,
+  free: true,
+  image: pythonDataImg,
+},
+
+{
+  id: 11,
+  title: "MySQL Database Mastery",
+  instructor: "Hardik Pandya",
+  category: "SQL",
+  categorySlug: "sql",
+  duration: "16 Hours",
+  level: "Advanced",
+  description:
+    "Master database design, complex queries, joins, subqueries, normalization and MySQL fundamentals.",
+  featured: false,
+  free: true,
+  image: mysqlImg,
+},
+
+{
+  id: 12,
+  title: "Generative AI with Prompting",
+  instructor: "Abhishek Sharma",
+  category: "Prompt Engineering",
+  categorySlug: "prompt-engineering",
+  duration: "12 Hours",
+  level: "Intermediate",
+  description:
+    "Learn advanced prompting strategies and use generative AI effectively for research, coding and creative work.",
+  featured: true,
+  free: true,
+  image: generativeAiImg,
+},
+
+
+  
 ];
 
 export default courses;

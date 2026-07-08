@@ -1,3 +1,4 @@
+
 /* ========================================
    CATEGORY PAGE
 ======================================== */
@@ -5,7 +6,7 @@
 .category-page {
   min-height: 100vh;
 
-  background: #0b0f19;
+  background: #ffffff;
 }
 
 
@@ -22,17 +23,27 @@
   background:
     radial-gradient(
       circle at 85% 20%,
-      rgba(255, 107, 0, 0.13),
-      transparent 30%
+      rgba(139, 92, 246, 0.14),
+      transparent 32%
     ),
-    #0b0f19;
+    radial-gradient(
+      circle at 12% 80%,
+      rgba(56, 189, 248, 0.07),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #fafaff 50%,
+      #f7f5ff 100%
+    );
 
   border-bottom:
-    1px solid rgba(255, 255, 255, 0.06);
+    1px solid rgba(99, 102, 241, 0.07);
 }
 
 
-/* Orange separator */
+/* Gradient separator */
 
 .category-page-hero::after {
   content: "";
@@ -50,14 +61,14 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 107, 0, 0.15),
-    rgba(255, 107, 0, 0.7),
-    rgba(255, 107, 0, 0.15),
+    rgba(99, 102, 241, 0.12),
+    rgba(139, 92, 246, 0.55),
+    rgba(168, 85, 247, 0.12),
     transparent
   );
 
   box-shadow:
-    0 0 25px rgba(255, 107, 0, 0.22);
+    0 0 25px rgba(99, 102, 241, 0.12);
 }
 
 
@@ -66,6 +77,9 @@
 ======================================== */
 
 .category-hero-content {
+  position: relative;
+  z-index: 2;
+
   width: 100%;
   max-width: 900px;
 
@@ -92,15 +106,19 @@
 
   margin-bottom: 38px;
 
-  color: #94a3b8;
+  color: #64748b;
 
   font-size: 14px;
   font-weight: 600;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 
 .category-back-link:hover {
-  color: #ff6b00;
+  color: #6366f1;
 
   transform: translateX(-4px);
 }
@@ -116,19 +134,26 @@
   margin-bottom: 18px;
   padding: 8px 15px;
 
-  background: rgba(255, 107, 0, 0.1);
+  background: linear-gradient(
+    90deg,
+    rgba(99, 102, 241, 0.09),
+    rgba(168, 85, 247, 0.08)
+  );
 
   border:
-    1px solid rgba(255, 107, 0, 0.22);
+    1px solid rgba(99, 102, 241, 0.16);
 
   border-radius: 999px;
 
-  color: #ff9a57;
+  color: #6366f1;
 
   font-size: 12px;
   font-weight: 700;
 
   letter-spacing: 1.8px;
+
+  box-shadow:
+    0 8px 22px rgba(99, 102, 241, 0.06);
 }
 
 
@@ -139,7 +164,7 @@
 .category-hero-content h1 {
   margin: 0 0 20px;
 
-  color: #f8fafc;
+  color: #111827;
 
   font-size: 56px;
   line-height: 1.15;
@@ -151,7 +176,21 @@
 
 
 .category-hero-content h1 span {
-  color: #ff6b00;
+  display: inline-block;
+
+  background: linear-gradient(
+    90deg,
+    #6366f1 0%,
+    #8b5cf6 50%,
+    #a855f7 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  color: transparent;
 }
 
 
@@ -164,7 +203,7 @@
 
   margin: 0 auto;
 
-  color: #94a3b8;
+  color: #64748b;
 
   font-size: 17px;
   line-height: 1.75;
@@ -176,11 +215,66 @@
 ======================================== */
 
 .category-courses-section {
+  position: relative;
+  overflow: hidden;
+
   min-height: 500px;
 
   padding: 75px 5% 110px;
 
-  background: #0f1523;
+  background:
+    linear-gradient(
+      180deg,
+      #f8f7ff 0%,
+      #f4f2ff 50%,
+      #f8f9ff 100%
+    );
+}
+
+
+.category-courses-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 550px;
+  height: 550px;
+
+  left: -300px;
+  bottom: -280px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.1),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+
+.category-courses-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  right: -250px;
+  top: -220px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(168, 85, 247, 0.09),
+    transparent 70%
+  );
+
+  pointer-events: none;
 }
 
 
@@ -189,6 +283,9 @@
 ======================================== */
 
 .category-results-header {
+  position: relative;
+  z-index: 2;
+
   width: 100%;
   max-width: 1420px;
 
@@ -207,7 +304,7 @@
 
   margin-bottom: 10px;
 
-  color: #ff6b00;
+  color: #6366f1;
 
   font-size: 11px;
   font-weight: 700;
@@ -219,9 +316,11 @@
 .category-results-header h2 {
   margin: 0;
 
-  color: #f8fafc;
+  color: #111827;
 
   font-size: 32px;
+
+  font-weight: 800;
 
   letter-spacing: -0.8px;
 }
@@ -241,6 +340,9 @@
 ======================================== */
 
 .category-course-grid {
+  position: relative;
+  z-index: 2;
+
   width: 100%;
   max-width: 1420px;
 
@@ -270,6 +372,9 @@
 ======================================== */
 
 .category-empty-state {
+  position: relative;
+  z-index: 2;
+
   width: 100%;
   max-width: 600px;
 
@@ -279,12 +384,21 @@
 
   text-align: center;
 
-  background: #151d2d;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(250, 249, 255, 0.98) 100%
+    );
 
   border:
-    1px solid rgba(255, 255, 255, 0.08);
+    1px solid rgba(99, 102, 241, 0.11);
 
   border-radius: 22px;
+
+  box-shadow:
+    0 20px 50px rgba(79, 70, 229, 0.09),
+    0 4px 12px rgba(15, 23, 42, 0.03);
 }
 
 
@@ -298,21 +412,28 @@
   align-items: center;
   justify-content: center;
 
-  background: rgba(255, 107, 0, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.1),
+    rgba(168, 85, 247, 0.08)
+  );
 
   border:
-    1px solid rgba(255, 107, 0, 0.2);
+    1px solid rgba(99, 102, 241, 0.14);
 
   border-radius: 18px;
 
-  color: #ff6b00;
+  color: #6366f1;
+
+  box-shadow:
+    0 10px 24px rgba(99, 102, 241, 0.08);
 }
 
 
 .category-empty-state h2 {
   margin: 0 0 10px;
 
-  color: #f8fafc;
+  color: #111827;
 
   font-size: 26px;
 }
@@ -321,7 +442,7 @@
 .category-empty-state p {
   margin: 0 0 25px;
 
-  color: #94a3b8;
+  color: #64748b;
 }
 
 
@@ -333,7 +454,12 @@
 
   padding: 13px 22px;
 
-  background: #ff6b00;
+  background: linear-gradient(
+    135deg,
+    #6366f1 0%,
+    #8b5cf6 55%,
+    #a855f7 100%
+  );
 
   border-radius: 999px;
 
@@ -342,17 +468,23 @@
   font-size: 14px;
   font-weight: 700;
 
+  box-shadow:
+    0 10px 25px rgba(99, 102, 241, 0.22);
+
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
 }
 
 
 .category-empty-state a:hover {
   transform: translateY(-2px);
 
+  filter: brightness(1.06);
+
   box-shadow:
-    0 12px 28px rgba(255, 107, 0, 0.25);
+    0 15px 32px rgba(99, 102, 241, 0.32);
 }
 
 
@@ -433,3 +565,4 @@
   }
 
 }
+

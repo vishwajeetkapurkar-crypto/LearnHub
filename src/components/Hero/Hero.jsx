@@ -1,5 +1,5 @@
 import "./Hero.css";
-import heroImage from "../../assets/images/hero.png";
+import heroImage from "../../assets/images/hero4.png";
 
 import { Link } from "react-router-dom";
 import { ArrowRight, Star } from "lucide-react";
